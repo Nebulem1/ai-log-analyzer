@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+celery==5.3.6
+redis==5.0.1
+langchain
+langchain-google-genai
+sqlalchemy
+asyncpg
+alembic
+pandas
+python-multipart
+pydantic-settings
+psycopg2-binary
