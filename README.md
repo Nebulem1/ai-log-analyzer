@@ -232,6 +232,14 @@ Each worker handles tasks independently from the shared Redis queue.
 
 ---
 
+## Testing
+```bash
+pytest tests/ -v
+```
+tests covering:
+- CSV validation (valid file, empty file, missing columns, invalid levels, corrupt file)
+- Log parsing (deduplication, frequency counting, first/last seen tracking, multiple sources)
+
 ## Interactive API Docs
 
 Once running, visit: `http://localhost:8000/docs`
