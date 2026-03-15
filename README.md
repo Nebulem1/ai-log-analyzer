@@ -213,6 +213,15 @@ curl http://localhost:8000/jobs/abc-123
 
 ---
 
+## Monitoring
+
+Flower dashboard available at `http://localhost:5555`
+
+- Active tasks — real-time task execution
+- Processed / Failed / Succeeded counts per worker
+- Task history with execution time
+- Retry tracking
+
 ## Scaling Workers
 
 ```bash
