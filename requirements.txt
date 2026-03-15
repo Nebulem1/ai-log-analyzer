@@ -11,3 +11,4 @@ pandas
 python-multipart
 pydantic-settings
 psycopg2-binary
+flower

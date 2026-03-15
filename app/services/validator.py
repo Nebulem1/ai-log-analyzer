@@ -8,11 +8,11 @@ def validate_csv(file) -> pd.DataFrame:
     try:
         df = pd.read_csv(file)
     except Exception:
-        raise HTTPException(status_code=400, detail="Invalid file — CSV parse nahi hua")
+        raise HTTPException(status_code=400, detail="Invalid file — CSV CAN't be parsed")
 
     # empty file check
     if df.empty:
-        raise HTTPException(status_code=400, detail="CSV empty hai")
+        raise HTTPException(status_code=400, detail="Empty CSV file")
 
     # columns check
     missing = REQUIRED_COLUMNS - set(df.columns)

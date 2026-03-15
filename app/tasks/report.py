@@ -7,13 +7,26 @@ import uuid
 
 @celery.task
 def generate_report(results: list, job_id: str):
-
+    
+    critical,high,medium,low=[],[],[],[]
+    for r in results:
+        match r.get("severity"):
+            
+            case "Critical":
+                  critical.append(r)
+            case "High":
+                  high.append(r)
+            case "Medium":
+                medium.append(r)
+            case "Low":
+                low.append(r)
+            
     report = {
         "total_unique_errors": len(results),
-        "critical": [r for r in results if r.get("severity") == "Critical"],
-        "high": [r for r in results if r.get("severity") == "High"],
-        "medium": [r for r in results if r.get("severity") == "Medium"],
-        "low": [r for r in results if r.get("severity") == "Low"],
+        "critical": critical,
+        "high": high,
+        "medium": medium,
+        "low": low,
         "errors": results
     }
 
