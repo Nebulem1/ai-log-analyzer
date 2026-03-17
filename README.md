@@ -98,7 +98,7 @@ log-analyzer/
 
 **1. Clone the repository:**
 ```bash
-git clone https://github.com/your-username/log-analyzer.git
+git clone https://github.com/Nebulem1/ai-log-analyzer.git
 cd log-analyzer
 ```
 
